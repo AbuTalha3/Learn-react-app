@@ -73,22 +73,13 @@ body {
   padding: 0;
   margin-left: 1rem;
   list-style: none;
-}
-
-.list li:has(input:checked) label {
-  color: hsl(200, 20%, 40%);
-}
-
-.list {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.list li {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
+.list li:has(input:checked) label {
+  color: hsl(200, 20%, 40%);
 }
 
 .list li label {
@@ -98,8 +89,10 @@ body {
   align-items: center;
 }
 
-.list li:has(input:focus-visible) label {
-  outline: 1px solid hsl(200, 100%, 50%);
+.list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .list li input {
@@ -109,6 +102,10 @@ body {
   appearance: none;
   pointer-events: none;
   position: absolute;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid hsl(200, 100%, 50%);
 }
 
 .list li label::before {
