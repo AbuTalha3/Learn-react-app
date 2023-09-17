@@ -58,6 +58,15 @@ body {
   color: hsl(200, 100%, 90%);
 }
 
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
 .new-item-form input:focus {
   border: 1px solid hsl(200, 100%, 70%);
 }
@@ -78,10 +87,6 @@ body {
   gap: 0.3rem;
 }
 
-.list li:has(input:checked) label {
-  color: hsl(200, 20%, 40%);
-}
-
 .list li label {
   display: flex;
   gap: 0.25rem;
@@ -89,19 +94,14 @@ body {
   align-items: center;
 }
 
+.list li:has(input:checked) label {
+  color: hsl(200, 20%, 40%);
+}
+
 .list li {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-}
-
-.list li input {
-  outline: none;
-  width: 0;
-  height: 0;
-  appearance: none;
-  pointer-events: none;
-  position: absolute;
 }
 
 .list li:has(input:focus-visible) label {
@@ -115,7 +115,6 @@ body {
   height: 0.9rem;
   background: hsl(200, 100%, 90%);
   border-radius: 0.25em;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
